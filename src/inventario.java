@@ -18,7 +18,12 @@ public class inventario {
     }
     //Complejidad(o1)
     public void añadirproducto(producto p) {
-        productos.add(p);
+        if(!productos.contains(p)) {
+            productos.add(p);
+        }else {
+            System.out.println("Ya existe el producto");
+        }
+
     }
     //Complejidad(oN)
     public void actualizarStock(String nombre, int stock) {
