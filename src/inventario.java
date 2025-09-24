@@ -7,7 +7,7 @@ public class inventario {
     public inventario(ArrayList<producto> productos) {
         this.productos = productos;
     }
-
+//Complejidad(oN)
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -16,11 +16,11 @@ public class inventario {
         }
         return builder.toString();
     }
-
+    //Complejidad(o1)
     public void añadirproducto(producto p) {
         productos.add(p);
     }
-
+    //Complejidad(oN)
     public void actualizarStock(String nombre, int stock) {
         for (producto p : productos) {
             if (p.getNombre().equals(nombre)) {
@@ -28,7 +28,7 @@ public class inventario {
             }
         }
     }
-
+    //Complejidad(oN)
     public void venderproducto(String nombre, int cantidad) {
         for (producto p : productos) {
             if (p.getNombre().equals(nombre)) {
@@ -43,7 +43,7 @@ public class inventario {
             }
         }
     }
-
+    //Complejidad(oN)
     public void buscarProducto(String nombre) {
         for (producto p : productos) {
             if (p.getNombre().equals(nombre)) {
@@ -53,7 +53,7 @@ public class inventario {
             }
         }
     }
-
+    //Complejidad(oN)
     public List<producto> filtrarPorCategoria(categoria.categorias categoria) {
         List<producto> productosFiltrado = new ArrayList<>();
         for (producto p : productos) {
@@ -63,7 +63,7 @@ public class inventario {
         }
         return productosFiltrado;
     }
-
+    //Complejidad(oN)
     public void precioTotal() {
         double total = 0;
         for (producto p : productos) {
@@ -71,7 +71,7 @@ public class inventario {
         }
         System.out.println("Precio total del producto: " + total);
     }
-
+    //Complejidad(oN)
     public void tamanoInventariioPorStock() {
         int totalItems = 0;
         for (producto p : productos) {
@@ -79,7 +79,7 @@ public class inventario {
         }
         System.out.println("Total de items en el inventario: " + totalItems);
     }
-
+    //Complejidad(oN)
     public void mostrarInventario() {
         System.out.println("Inventario completo: ");
         for (producto p : productos) {
